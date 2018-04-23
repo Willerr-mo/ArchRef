@@ -28,11 +28,11 @@ public class AccessDB {
 
     private void abrirConexionBD() {
         if (conexionBD == null) {
-            String tablaConexionBD = "jdbc:mysql://localhost/omgdaw"; //Conexión con nuestra BD
+            String tablaConexionBD = "jdbc:mysql://den1.mysql5.gear.host:3306/omgyeah"; //Conexión con nuestra BD
             try {
                 Class.forName("com.mysql.jdbc.Driver"); //El driver de mysql
                 //Conexión teniendo en cuenta el usuario y clave de administrador de la BD
-                conexionBD = DriverManager.getConnection(tablaConexionBD, "root", "");
+                conexionBD = DriverManager.getConnection(tablaConexionBD, "omgyeah", "Sn54bA4--5l7");
 
             } catch (Exception e) {
                 //Error en la conexión con la BD
@@ -53,7 +53,7 @@ public class AccessDB {
             String con;
             Statement s = conexionBD.createStatement();
             //Consulta, buscamos una correspondencia usuario/clave
-            con = "SELECT * FROM `usuarios` WHERE id='1' and clave='pass'";
+            con = "SELECT * FROM `usuarios` WHERE id='1' and clave='juan'";
             resultados = s.executeQuery(con);
             while(resultados.next()){
                 System.out.println(resultados.getInt(1)+ " " +resultados.getString(2));

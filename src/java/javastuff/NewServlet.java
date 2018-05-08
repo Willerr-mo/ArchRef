@@ -33,8 +33,8 @@ public class NewServlet extends HttpServlet {
         try (PrintWriter out = response.getWriter()) {
             AccessDB baseDatos = new AccessDB();
            // out.println("<div>");
-            out.println(baseDatos.getManolo());
-          //  out.println("</div>");
+            //out.println(baseDatos.getManolo());
+            out.println("soy el servlet");
             
            
         }
